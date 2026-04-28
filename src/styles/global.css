@@ -1,0 +1,182 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT COLORS (PRO LEVEL) */
+:root {
+  --bg-primary: #0b0b0b;
+  --bg-secondary: #111111;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+
+  --primary: #ff6a00;       /* main orange */
+  --primary-light: #ff8c42; /* hover orange */
+  --accent: #ffa94d;
+
+  --text-main: #ffffff;
+  --text-secondary: #b3b3b3;
+
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* BODY */
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000000);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.transparent-glass {
+  background: rgba(255, 255, 255, 0.05);  /* transparency */
+  backdrop-filter: blur(12px);           /* blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* GLASS EFFECT (PREMIUM) */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(255, 106, 0, 0.15);
+}
+
+/* BUTTON (PREMIUM ORANGE) */
+.btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.4);
+}
+
+/* INPUT FIELDS */
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+  margin-bottom: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
+}
+
+/* GRID SYSTEM */
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* HEADINGS */
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* IMAGE */
+img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* CARD HOVER EFFECT */
+.card-hover {
+  transition: 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 106, 0, 0.2);
+}
+
+/* FADE ANIMATION */
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLLBAR (PREMIUM TOUCH) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* FOOTER TEXT */
+footer {
+  margin-top: 40px;
+  color: var(--text-secondary);
+}
